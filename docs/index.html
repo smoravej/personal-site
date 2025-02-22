@@ -11,24 +11,30 @@
     }
     /* Header styling */
     header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      position: relative;
       background-color: #333;
       color: #fff;
       padding: 10px 20px;
-      position: relative;
+      text-align: center; /* Center header content */
     }
-    .site-title {
-      font-size: 18px;
+    .header-title h1 {
+      margin: 0;
+      font-size: 2em; /* Larger font for "Sepehr Moravej" */
     }
-    /* Hamburger menu icon */
+    .header-title h2 {
+      margin: 0;
+      font-size: 1em; /* Smaller font for "Biopharma Market Expert" */
+    }
+    /* Menu icon styling - positioned in the top right */
     .menu-icon {
+      position: absolute;
+      top: 10px;
+      right: 20px;
       cursor: pointer;
       font-size: 24px;
       user-select: none;
     }
-    /* Menu styling */
+    /* Dropdown menu styling */
     .menu {
       display: none;
       position: absolute;
@@ -49,19 +55,28 @@
       color: #333;
       font-size: 16px;
     }
-    /* Centered image styling */
-    .center-image {
+    /* Responsive image styling */
+    .responsive-image {
       display: block;
-      margin: 20px auto;
-      max-width: 100%;
+      margin: 20px 0 0 auto; /* Right-align the image */
+      max-width: 50%; /* Up to half the screen width on mobile */
       height: auto;
+    }
+    /* On larger screens, restrict image width to a quarter of the screen */
+    @media (min-width: 600px) {
+      .responsive-image {
+        max-width: 25%;
+      }
     }
   </style>
 </head>
 <body>
 
 <header>
-  <div class="site-title">Sepehr Moravej - Biopharma Market Expert</div>
+  <div class="header-title">
+    <h1>Sepehr Moravej</h1>
+    <h2>Biopharma Market Expert</h2>
+  </div>
   <!-- Hamburger menu icon -->
   <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
   <!-- Dropdown menu -->
@@ -73,19 +88,15 @@
 </header>
 
 <main>
-  <!-- Replace 'your-image.jpg' with the actual image file path -->
-  <img src="your-image.jpg" alt="Descriptive Alt Text" class="center-image">
+  <!-- Replace 'your-image.jpg' with your image file path -->
+  <img src="your-image.jpg" alt="Descriptive Alt Text" class="responsive-image">
 </main>
 
 <script>
-  // Function to toggle the display of the dropdown menu
+  // Toggle dropdown menu visibility
   function toggleMenu() {
     var menu = document.getElementById('menu');
-    if (menu.style.display === 'block') {
-      menu.style.display = 'none';
-    } else {
-      menu.style.display = 'block';
-    }
+    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
   }
 </script>
 
