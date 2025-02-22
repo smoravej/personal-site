@@ -3,10 +3,91 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My First Website</title>
+  <title>Sepehr Moravej - Biopharma Market Expert</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    /* Header styling */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      position: relative;
+    }
+    .site-title {
+      font-size: 18px;
+    }
+    /* Hamburger menu icon */
+    .menu-icon {
+      cursor: pointer;
+      font-size: 24px;
+      user-select: none;
+    }
+    /* Menu styling */
+    .menu {
+      display: none;
+      position: absolute;
+      top: 50px;
+      right: 20px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      list-style: none;
+      padding: 10px;
+      border-radius: 5px;
+      z-index: 100;
+    }
+    .menu li {
+      margin: 10px 0;
+    }
+    .menu li a {
+      text-decoration: none;
+      color: #333;
+      font-size: 16px;
+    }
+    /* Centered image styling */
+    .center-image {
+      display: block;
+      margin: 20px auto;
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to My Website!</h1>
-  <p>This is a simple webpage built using GitHub Pages.</p>
+
+<header>
+  <div class="site-title">Sepehr Moravej - Biopharma Market Expert</div>
+  <!-- Hamburger menu icon -->
+  <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+  <!-- Dropdown menu -->
+  <ul class="menu" id="menu">
+    <li><a href="cv.html">CV</a></li>
+    <li><a href="current-work.html">Current Work</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+</header>
+
+<main>
+  <!-- Replace 'your-image.jpg' with the actual image file path -->
+  <img src="your-image.jpg" alt="Descriptive Alt Text" class="center-image">
+</main>
+
+<script>
+  // Function to toggle the display of the dropdown menu
+  function toggleMenu() {
+    var menu = document.getElementById('menu');
+    if (menu.style.display === 'block') {
+      menu.style.display = 'none';
+    } else {
+      menu.style.display = 'block';
+    }
+  }
+</script>
+
 </body>
 </html>
