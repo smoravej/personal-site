@@ -1,11 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sepehr Moravej - Biopharma Market Expert</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    /* Header styling */
+    header {
+      position: relative;
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      text-align: center;
+    }
+    .header-title h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+    .header-title h2 {
+      margin: 0;
+      font-size: 1em;
+    }
+    /* Menu icon styling */
+    .menu-icon {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      cursor: pointer;
+      font-size: 24px;
+      user-select: none;
+    }
+    /* Dropdown menu styling */
+    .menu {
+      display: none;
+      position: absolute;
+      top: 50px;
+      right: 20px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      list-style: none;
+      padding: 10px;
+      border-radius: 5px;
+      z-index: 100;
+    }
+    .menu li {
+      margin: 10px 0;
+    }
+    .menu li a {
+      text-decoration: none;
+      color: #333;
+      font-size: 16px;
+    }
+    /* Responsive content */
+    .content-container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      text-align: justify;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    /* Responsive image styling */
+    .responsive-image {
+      display: block;
+      margin: 20px auto;
+      max-width: 200px; /* Smaller image */
+      height: auto;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-title">
+    <h1>Sepehr Moravej</h1>
+    <h2>Biopharma Market Expert</h2>
+  </div>
+  <!-- Hamburger menu icon -->
+  <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+  <!-- Dropdown menu -->
+  <ul class="menu" id="menu">
+    <li><a href="cv.html">CV</a></li>
+    <li><a href="current-work.html">Current Work</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+</header>
+
 <main>
   <!-- Introductory paragraph -->
-  <section style="padding: 20px; max-width: 800px; margin: 0 auto; font-size: 18px; line-height: 1.6;">
+  <section class="content-container">
     <p>
       I am a pharmaceutical market analyst and strategist with expertise in forecasting, epidemiological research, and health economics and outcomes research (HEOR). My work spans commercial strategy, brand planning, and asset valuation, supporting data-driven decision-making across the pharmaceutical and biotech industries. In addition to my experience building market models and forecasting platforms, I have training in machine learning and statistical modeling, applying these methods to improve insights in drug commercialization, market access, and patient outcomes. My approach combines analytical rigor with a deep understanding of the commercial landscape to help companies optimize their strategies and navigate uncertainty.
     </p>
   </section>
 
-  <!-- Replace 'your-image.jpg' with your image file path -->
+  <!-- Profile image -->
   <img src="your-image.jpg" alt="Descriptive Alt Text" class="responsive-image">
 </main>
+
+<script>
+  // Toggle dropdown menu visibility
+  function toggleMenu() {
+    var menu = document.getElementById('menu');
+    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
+
+</body>
+</html>
